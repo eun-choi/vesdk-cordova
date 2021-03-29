@@ -64,7 +64,7 @@ repositories {
 }
 
 dependencies {
-    api 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.30'
+    api 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.31'
     compileOnly "ly.img.android.sdk:serializer:$imglyConfig.version"
     implementation 'com.google.code.gson:gson:2.8.6'
 }
