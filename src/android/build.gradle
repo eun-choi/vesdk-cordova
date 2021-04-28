@@ -47,8 +47,6 @@ android {
     defaultConfig {
         minSdkVersion safeExtGet('minSdkVersion', 22)
         targetSdkVersion safeExtGet('targetSdkVersion', 29)
-        versionCode 1
-        versionName "1.0"
     }
     lintOptions {
         abortOnError false
