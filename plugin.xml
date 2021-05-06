@@ -68,7 +68,7 @@
                 <source url="https://github.com/CocoaPods/Specs.git"/>
             </config>
             <pods use-frameworks="true">
-                <pod name="VideoEditorSDK" spec="~> 10.22"/>
+                <pod name="VideoEditorSDK" spec="10.22.0"/>
             </pods>
         </podspec>
     </platform>
