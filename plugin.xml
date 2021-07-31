@@ -26,9 +26,9 @@
             </feature>
         </config-file>
 
-        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+        <!--<config-file target="AndroidManifest.xml" parent="/manifest/application">
             <provider xmlns:tools="http://schemas.android.com/tools" android:authorities="${applicationId}.IMGLYAutoInit" android:enabled="false" android:exported="false" android:name="ly.img.android.IMGLYAutoInit" tools:replace="android:enabled"/>
-        </config-file>
+        </config-file>-->
 
         <!-- Add repositories to root build.gradle -->
         <hook type="before_prepare" src="hooks/repositories-gradle-hook.js"/>
