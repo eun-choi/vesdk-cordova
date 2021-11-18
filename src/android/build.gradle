@@ -41,12 +41,12 @@ task checkVESDKVersion {
 preBuild.dependsOn checkVESDKVersion
 
 android {
-    compileSdkVersion safeExtGet('compileSdkVersion', 29)
+    compileSdkVersion safeExtGet('compileSdkVersion', 30)
     buildToolsVersion safeExtGet('buildToolsVersion', '30.0.3')
 
     defaultConfig {
         minSdkVersion safeExtGet('minSdkVersion', 22)
-        targetSdkVersion safeExtGet('targetSdkVersion', 29)
+        targetSdkVersion safeExtGet('targetSdkVersion', 30)
     }
     lintOptions {
         abortOnError false
