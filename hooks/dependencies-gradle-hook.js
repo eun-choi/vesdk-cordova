@@ -14,8 +14,7 @@ module.exports = (context) => {
   const imglyDependencies =
     "\n" +
     BLOCK_START +
-    `
-    classpath "ly.img.android.sdk:plugin:9.1.0"` +
+    `classpath "ly.img.android.sdk:plugin:9.1.0"` +
     "\n" +
     BLOCK_END +
     "\n";
