@@ -54,11 +54,11 @@ module.exports = (context) => {
                 fileContents.substr(location);
             });
 
-            /*const regex = /ext.kotlin_version = '([0-9]*).([0-9]*).([0-9]*)'/gm;
+            const regex = /ext.kotlin_version = '([0-9]*).([0-9]*).([0-9]*)'/gm;
             const versionMatch = regex.exec(fileContents);
             const version = versionMatch[0].replace("ext.kotlin_version = ", "");
             const newVersion = `${VERSION_BLOCK_START + version}\n    ext.kotlin_version = '${gradlePluginVersion}'\n    ${VERSION_BLOCK_END}`;
-            fileContents = fileContents.replace(regex, newVersion);*/
+            fileContents = fileContents.replace(regex, newVersion);
             fs.writeFileSync(file, fileContents, "utf8");
             console.log("updated " + file + " to include imgly dependencies ");
           }
