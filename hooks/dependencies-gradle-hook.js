@@ -15,7 +15,7 @@ module.exports = (context) => {
     "\n" +
     BLOCK_START +
     `
-        classpath "ly.img.android.sdk:plugin:9.1.0"` +
+        classpath "ly.img.android.sdk:plugin:9.1.1"` +
     "\n" +
     BLOCK_END +
     "\n";
