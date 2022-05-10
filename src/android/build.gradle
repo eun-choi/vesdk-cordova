@@ -41,6 +41,10 @@ task checkVESDKVersion {
 preBuild.dependsOn checkVESDKVersion
 
 android {
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
     compileSdkVersion safeExtGet('compileSdkVersion', 30)
     buildToolsVersion safeExtGet('buildToolsVersion', '30.0.3')
 
@@ -54,10 +58,6 @@ android {
     buildTypes {
         all {
         }
-    }
-
-    kotlinOptions {
-        jvmTarget = "11"
     }
 }
 
