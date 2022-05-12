@@ -9,7 +9,7 @@ module.exports = (context) => {
   const BLOCK_END = `        // DEPENDENCIES ADDED BY IMGLY - BLOCK END`;
   const VERSION_BLOCK_START = "// VERSION CHANGED BY IMGLY - START - ";
   const VERSION_BLOCK_END = "// VERSION CHANGED BY IMGLY - END -";
-  const gradlePluginVersion = '1.5.32';
+  const gradlePluginVersion = '1.6.21';
 
   const imglyDependencies =
     "\n" +
