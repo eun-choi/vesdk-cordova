@@ -12,6 +12,7 @@ apply plugin: 'kotlin-android'
 imglyConfig {
     vesdk {
         enabled true
+        licensePath 'assets/LICENSE.android'
     }
 
     useInheritanceDependencies true
@@ -22,7 +23,7 @@ imglyConfig {
     }
 }
 
-def MIN_LY_IMG_ANDROID_SDK_PLUGIN_VERSION = "10.2.1"
+def MIN_LY_IMG_ANDROID_SDK_PLUGIN_VERSION = "10.3.0"
 
 task checkVESDKVersion {
     /*if (imglyConfig.convertToVersionNumber(imglyConfig.getVersion()) < imglyConfig.convertToVersionNumber(MIN_LY_IMG_ANDROID_SDK_PLUGIN_VERSION)) {

@@ -10,7 +10,7 @@ module.exports = (context) => {
   const VERSION_BLOCK_START = "// VERSION CHANGED BY IMGLY - START - ";
   const VERSION_BLOCK_END = "// VERSION CHANGED BY IMGLY - END -";
   const gradlePluginVersion = '1.6.21';
-  var sdkVersion = "10.2.1";
+  var sdkVersion = "10.3.0";
 
   try {
     const configFilePath = path.join(
@@ -33,7 +33,7 @@ module.exports = (context) => {
     "\n" +
     BLOCK_START +
     `
-        classpath "ly.img.android.sdk:plugin:10.2.1"` +
+        classpath "ly.img.android.sdk:plugin:10.3.0"` +
     "\n" +
     BLOCK_END +
     "\n";
