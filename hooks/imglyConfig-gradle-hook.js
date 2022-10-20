@@ -23,8 +23,11 @@ imglyConfig {
         // include 'ui:video-composition' // for VideoEditor
         include 'ui:video-library' // for VideoEditor
         // include 'ui:audio-composition' // for VideoEditor
+        // include 'ui:giphy-sticker' // for VideoEditor
+
         // This module is big, remove the serializer if you don't need that feature.
         // include 'backend:serializer'
+
         // Remove the asset packs you don't need, these are also big in size.
         // include 'assets:font-basic'
         // include 'assets:frame-basic'
@@ -33,6 +36,7 @@ imglyConfig {
         // include 'assets:sticker-shapes'
         // include 'assets:sticker-emoticons'
         // include 'assets:sticker-animated' // for VideoEditor
+
         // include 'backend:sticker-animated' // for VideoEditor
         // include 'backend:sticker-smart'
     }
