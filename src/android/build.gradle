@@ -50,7 +50,7 @@ android {
     buildToolsVersion safeExtGet('buildToolsVersion', '32.0.0')
 
     defaultConfig {
-        minSdkVersion safeExtGet('minSdkVersion', 22)
+        minSdkVersion safeExtGet('minSdkVersion', 23)
         targetSdkVersion safeExtGet('targetSdkVersion', 32)
     }
     lintOptions {
