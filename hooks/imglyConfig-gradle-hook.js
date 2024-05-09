@@ -1,12 +1,13 @@
 const fs = require("fs");
 const path = require("path");
+const async = require("async");
 
 module.exports = (context) => {
   "use strict";
 
   const imglyConfig = `
 // Comment out the modules you don't need, to save size.
-IMGLY.configure {
+imglyConfig {
     modules {
         // include 'ui:text'
         // include 'ui:focus'

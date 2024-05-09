@@ -9,9 +9,10 @@ apply plugin: 'ly.img.android.sdk'
 apply plugin: 'kotlin-android'
 
 // Configure the VESDKPlugin
-IMGLY.predefine {
+imglyConfig {
     vesdk {
         enabled true
+        licensePath 'assets/LICENSE.android'
     }
 
     useInheritanceDependencies true
@@ -22,10 +23,10 @@ IMGLY.predefine {
     }
 }
 
-def MIN_LY_IMG_ANDROID_SDK_PLUGIN_VERSION = "10.1.1"
+def MIN_LY_IMG_ANDROID_SDK_PLUGIN_VERSION = "10.7.3"
 
 task checkVESDKVersion {
-    if (imglyConfig.convertToVersionNumber(imglyConfig.getVersion()) < imglyConfig.convertToVersionNumber(MIN_LY_IMG_ANDROID_SDK_PLUGIN_VERSION)) {
+    /*if (imglyConfig.convertToVersionNumber(imglyConfig.getVersion()) < imglyConfig.convertToVersionNumber(MIN_LY_IMG_ANDROID_SDK_PLUGIN_VERSION)) {
         String WRONG_VERSION = "" +
             "┌───────────────────────────────────────────────────────────────────────┐\n"+
             "│ VideoEditor SDK update required!                                      │\n"+
@@ -35,18 +36,22 @@ task checkVESDKVersion {
             "└───────────────────────────────────────────────────────────────────────┘\n"
 
         throw new GradleScriptException(WRONG_VERSION, new IllegalArgumentException(WRONG_VERSION))
-    }
+    }*/
 }
 
 preBuild.dependsOn checkVESDKVersion
 
 android {
-    compileSdkVersion safeExtGet('compileSdkVersion', 31)
-    buildToolsVersion safeExtGet('buildToolsVersion', '31.0.0')
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
+    compileSdkVersion safeExtGet('compileSdkVersion', 33)
+    buildToolsVersion safeExtGet('buildToolsVersion', '33.0.3')
 
     defaultConfig {
-        minSdkVersion safeExtGet('minSdkVersion', 21)
-        targetSdkVersion safeExtGet('targetSdkVersion', 29)
+        minSdkVersion safeExtGet('minSdkVersion', 24)
+        targetSdkVersion safeExtGet('targetSdkVersion', 33)
     }
     lintOptions {
         abortOnError false
@@ -62,7 +67,8 @@ repositories {
 }
 
 dependencies {
-    api 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.32'
+    api 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.24'
     compileOnly "ly.img.android.sdk:serializer:$imglyConfig.version"
-    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
 }

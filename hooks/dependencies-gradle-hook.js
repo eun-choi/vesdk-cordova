@@ -10,8 +10,7 @@ module.exports = (context) => {
   const VERSION_BLOCK_START = "// VERSION CHANGED BY IMGLY - START - ";
   const VERSION_BLOCK_END = "// VERSION CHANGED BY IMGLY - END -";
   const gradlePluginVersion = '1.9.24';
-  var sdkVersion = "10.9.0";
-  var kspVersion = "1.9.24-1.0.20";
+  var sdkVersion = "10.7.3";
 
   try {
     const configFilePath = path.join(
@@ -22,9 +21,7 @@ module.exports = (context) => {
     if (config != null) {
       const configJson = JSON.parse(config);
       const configVersion = configJson.version;
-      const configKspVersion = configJson.kspVersion;
       if (configVersion != null) sdkVersion = configVersion;
-      if (configKspVersion != null) kspVersion = configKspVersion;
     }
   } catch {
     console.log(
@@ -36,8 +33,7 @@ module.exports = (context) => {
     "\n" +
     BLOCK_START +
     `
-        classpath "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin:1.9.24-1.0.20"
-        classpath "ly.img.android.sdk:plugin:10.9.0"` +
+        classpath "ly.img.android.sdk:plugin:10.7.3"` +
     "\n" +
     BLOCK_END +
     "\n";
