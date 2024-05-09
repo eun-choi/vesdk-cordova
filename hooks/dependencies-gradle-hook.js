@@ -9,9 +9,9 @@ module.exports = (context) => {
   const BLOCK_END = `        // DEPENDENCIES ADDED BY IMGLY - BLOCK END`;
   const VERSION_BLOCK_START = "// VERSION CHANGED BY IMGLY - START - ";
   const VERSION_BLOCK_END = "// VERSION CHANGED BY IMGLY - END -";
-  const gradlePluginVersion = '1.9.24';
+  const gradlePluginVersion = '1.8.22';
   var sdkVersion = "10.9.0";
-  var kspVersion = "1.9.24-1.0.20";
+  var kspVersion = "1.7.22-1.0.8";
 
   try {
     const configFilePath = path.join(
@@ -36,7 +36,7 @@ module.exports = (context) => {
     "\n" +
     BLOCK_START +
     `
-        classpath "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin:1.9.24-1.0.20"
+        classpath "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin:1.7.22-1.0.8"
         classpath "ly.img.android.sdk:plugin:10.9.0"` +
     "\n" +
     BLOCK_END +
