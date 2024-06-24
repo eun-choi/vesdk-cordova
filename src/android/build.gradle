@@ -9,7 +9,7 @@ apply plugin: 'ly.img.android.sdk'
 apply plugin: 'kotlin-android'
 
 // Configure the VESDKPlugin
-imglyConfig {
+IMGLY.predefine {
     vesdk {
         enabled true
         licensePath 'assets/LICENSE.android'
@@ -23,7 +23,7 @@ imglyConfig {
     }
 }
 
-def MIN_LY_IMG_ANDROID_SDK_PLUGIN_VERSION = "10.7.3"
+def MIN_LY_IMG_ANDROID_SDK_PLUGIN_VERSION = "10.9.0"
 
 task checkVESDKVersion {
     /*if (imglyConfig.convertToVersionNumber(imglyConfig.getVersion()) < imglyConfig.convertToVersionNumber(MIN_LY_IMG_ANDROID_SDK_PLUGIN_VERSION)) {
@@ -69,6 +69,6 @@ repositories {
 dependencies {
     api 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22'
     compileOnly "ly.img.android.sdk:serializer:$imglyConfig.version"
-    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.google.code.gson:gson:2.11.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
 }
