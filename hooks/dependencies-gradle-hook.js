@@ -36,8 +36,8 @@ module.exports = (context) => {
     "\n" +
     BLOCK_START +
     `
-        classpath "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin:${kspVersion}"
-        classpath "ly.img.android.sdk:plugin:${sdkVersion}"` +
+        classpath "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin:1.8.22-1.0.11"
+        classpath "ly.img.android.sdk:plugin:10.9.0"` +
     "\n" +
     BLOCK_END +
     "\n";
