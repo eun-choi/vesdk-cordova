@@ -68,7 +68,7 @@
                 <source url="https://cdn.cocoapods.org/"/>
             </config>
             <pods use-frameworks="true">
-                <pod name="VideoEditorSDK" spec="11.10.0"/>
+                <pod name="VideoEditorSDK" spec="11.10.1"/>
             </pods>
         </podspec>
     </platform>
