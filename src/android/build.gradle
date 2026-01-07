@@ -23,7 +23,7 @@ IMGLY.predefine {
     }
 }
 
-def MIN_LY_IMG_ANDROID_SDK_PLUGIN_VERSION = "10.10.0"
+def MIN_LY_IMG_ANDROID_SDK_PLUGIN_VERSION = "10.10.10"
 
 task checkVESDKVersion {
     /*if (imglyConfig.convertToVersionNumber(imglyConfig.getVersion()) < imglyConfig.convertToVersionNumber(MIN_LY_IMG_ANDROID_SDK_PLUGIN_VERSION)) {
@@ -46,12 +46,12 @@ android {
         jvmTarget = "17"
     }
 
-    compileSdkVersion safeExtGet('compileSdkVersion', 34)
-    buildToolsVersion safeExtGet('buildToolsVersion', '34.0.0')
+    compileSdkVersion safeExtGet('compileSdkVersion', 35)
+    buildToolsVersion safeExtGet('buildToolsVersion', '35.0.1')
 
     defaultConfig {
         minSdkVersion safeExtGet('minSdkVersion', 24)
-        targetSdkVersion safeExtGet('targetSdkVersion', 34)
+        targetSdkVersion safeExtGet('targetSdkVersion', 35)
     }
     lintOptions {
         abortOnError false
@@ -69,6 +69,6 @@ repositories {
 dependencies {
     api 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.25'
     compileOnly "ly.img.android.sdk:serializer:$imglyConfig.version"
-    implementation 'com.google.code.gson:gson:2.11.0'
+    implementation 'com.google.code.gson:gson:2.13.2'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
 }
